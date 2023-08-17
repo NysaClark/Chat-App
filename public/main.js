@@ -3,6 +3,10 @@ const chatMessages = document.querySelector(".chat-messages");
 
 const userList = document.getElementById("users");
 
+const { username } = Qs.parse(location.search, {
+  ignoreQueryPrefix: true,
+});
+
 const socket = io();
 
 // Join chatroom
