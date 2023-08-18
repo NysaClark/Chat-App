@@ -3,9 +3,8 @@ const chatMessages = document.querySelector(".chat-messages");
 
 const userList = document.getElementById("users");
 
-const { username } = Qs.parse(location.search, {
-  ignoreQueryPrefix: true,
-});
+// get username from URL
+var username = location.search.split('username=')[1]
 
 const socket = io();
 
